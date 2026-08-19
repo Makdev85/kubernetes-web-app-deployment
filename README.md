@@ -1,11 +1,8 @@
 # Kubernetes Web Application Deployment
 
-
 A web application containerized using **Docker** and deployed on a **Kubernetes cluster**. The project demonstrates the process of packaging an application into a Docker image, pushing the image to **DockerHub**, and deploying it to Kubernetes using deployment and service configurations.
 
-
 ## 🚀 Tech Stack
-
 
 * HTML / CSS / JavaScript
 * Docker
@@ -13,9 +10,7 @@ A web application containerized using **Docker** and deployed on a **Kubernetes 
 * Kubernetes
 * Linux / Ubuntu
 
-
 ## 🔄 Deployment Workflow
-
 
 ```text
 Web Application
@@ -29,48 +24,89 @@ Web Application
  Kubernetes Cluster
        ↓
  Deployed Application
-📋 Challenge
+```
+
+## 📋 Challenge
 
 The challenge required:
 
-Creating a web application and placing the application files inside a web-app directory.
-Creating a Docker image using a Dockerfile.
-Pushing the Docker image to DockerHub.
-Deploying the application on a Kubernetes cluster provided through KillerKoda.
-Challenge Brief
+1. Creating a web application and placing the application files inside a `web-app` directory.
+2. Creating a Docker image using a `Dockerfile`.
+3. Pushing the Docker image to DockerHub.
+4. Deploying the application on a Kubernetes cluster provided through KillerKoda.
 
-The original challenge instructions provided during the KillerKoda DevOps Challenge.
+### Challenge Brief
 
-🐳 Docker
-Build the Docker Image
+The original challenge instructions for Hackathon-2 at SD HUB.
+
+<p align="center">
+  <img src="screenshots/challenge.png" alt="KillerKoda Challenge" width="800">
+</p>
+
+## 🐳 Docker
+
+### Build the Docker Image
+
+```bash
 docker build -t <dockerhub-username>/<image-name>:latest .
-Login to DockerHub
+```
+
+### Login to DockerHub
+
+```bash
 docker login
-Push the Image
+```
+
+### Push the Image
+
+```bash
 docker push <dockerhub-username>/<image-name>:latest
-☸️ Kubernetes
-Deploy the Application
+```
+
+## ☸️ Kubernetes
+
+### Deploy the Application
+
+```bash
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
-Check the Deployment
+```
+
+### Check the Deployment
+
+```bash
 kubectl get pods
 kubectl get deployments
 kubectl get services
-🧪 KillerKoda Deployment
+```
 
-The application was deployed and tested on the Kubernetes cluster provided through the KillerKoda environment.
+## 🧪 KillerKoda Deployment
 
-The Kubernetes deployment was successfully created, and the application was exposed using a NodePort service.
+The application was deployed on the Kubernetes cluster provided through the KillerKoda environment.
 
-The deployment was verified using Kubernetes commands such as:
+A Kubernetes **Deployment** was created to manage the application pod, while a **NodePort Service** was used to expose the application.
 
-kubectl get pods
-kubectl get deployments
-kubectl get services
+<p align="center">
+  <img src="screenshots/kubernetes-deployment.png" alt="Kubernetes Deployment" width="900">
+</p>
 
-This confirmed that the application pod was running successfully and that the Kubernetes service was correctly exposing the application.
+The deployment was successfully verified using Kubernetes commands, confirming that the application pod was running and the service was exposing the application.
 
-📁 Project Structure
+## 🌐 Application Running
+
+After building the Docker image, pushing it to DockerHub, and deploying it on Kubernetes, the application was successfully accessed through the exposed service.
+
+<p align="center">
+  <img src="screenshots/application-running.png" alt="Application Running on Kubernetes" width="900">
+</p>
+
+The successful result demonstrates the complete workflow:
+
+**Application → Docker → DockerHub → Kubernetes → Running Application**
+
+## 📁 Project Structure
+
+```text
 kubernetes-web-app-deployment/
 │
 ├── web-app/
@@ -91,31 +127,36 @@ kubernetes-web-app-deployment/
 │   └── service.yaml
 │
 └── README.md
-🌐 Application Running
+```
 
-After building the Docker image, pushing it to DockerHub, and deploying it to Kubernetes, the web application was successfully accessed through the exposed Kubernetes service.
-
-The successful deployment demonstrates the complete workflow from application development to containerization and Kubernetes deployment.
-
-💡 What I Learned
+## 💡 What I Learned
 
 This challenge provided hands-on experience with:
 
-Containerizing web applications with Docker
-Building and tagging Docker images
-Publishing images to DockerHub
-Writing Kubernetes deployment and service configurations
-Deploying applications to a Kubernetes cluster
-Exposing applications using Kubernetes Services
-Managing applications through the Linux command line
-🏆 Achievement
+* Containerizing web applications with Docker
+* Building and tagging Docker images
+* Publishing images to DockerHub
+* Writing Kubernetes Deployment and Service configurations
+* Deploying applications to a Kubernetes cluster
+* Exposing applications using Kubernetes Services
+* Managing applications through the Linux command line
 
-🥉 3rd Position — KillerKoda DevOps Challenge at SD HUB
+## 🏆 Achievement
 
-⏱️ Completed in 34 minutes
+🥉 **3rd Position — KillerKoda DevOps Challenge at SD HUB**
 
-The challenge was completed within 34 minutes, resulting in a 3rd-place finish.
+⏱️ **Completed in 34 minutes**
 
-🏅 Final Result
+The challenge was completed within **34 minutes**, resulting in a **3rd-place finish**.
+
+## 🏅 Final Result
 
 The final result announced at the end of the challenge.
+
+<p align="center">
+  <img src="screenshots/result.png" alt="KillerKoda Challenge Result" width="900">
+</p>
+
+---
+
+**Built as part of a KillerKoda DevOps Challenge 🚀**
