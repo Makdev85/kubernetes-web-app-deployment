@@ -97,7 +97,7 @@ The deployment was successfully verified using Kubernetes commands, confirming t
 After building the Docker image, pushing it to DockerHub, and deploying it on Kubernetes, the application was successfully accessed through the exposed service.
 
 <p align="center">
-  <img src="screenshots/application-running.png" alt="Application Running on Kubernetes" width="900">
+  <img src="screenshots/Application Running on Kubernetes.png" alt="Application Running on Kubernetes" width="900">
 </p>
 
 The successful result demonstrates the complete workflow:
